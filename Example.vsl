@@ -1,0 +1,10 @@
+PROGRAM VslDemo
+BEGIN
+   A0 := 3;
+   B := 45;
+   H := -100023;
+   C := A;
+   D123 := B34A;
+   ESEL := GIRAFFE;
+   TEXTZEILE := "Hallo, Welt!";
+END.
