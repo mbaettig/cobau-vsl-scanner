@@ -1,0 +1,14 @@
+compile = "java -jar lib/antlr-4.11.1-complete.jar -o generated-src Vsl.g4 && javac -classpath .:generated-src:lib/antlr-4.11.1-complete.jar -d . $(find . -type f -name '*.java')"
+run = "java -classpath .:lib/antlr-4.11.1-complete.jar Main Example.vsl"
+entrypoint = "Vsl.g4"
+hidden = ["**/*.class", "lib", "generated-src", "Main.java"]
+
+[languages.java]
+pattern = "**/*.java"
+
+[languages.java.languageServer]
+start = "jdtls -date /tmp/jdtls-workspace"
+
+[nix]
+channel = "stable-25_05"
+
